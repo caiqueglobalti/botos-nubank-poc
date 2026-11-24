@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+artifacts/
+.botos/
+rfbrowser.log
+tests/cases/preencher_cpf_nubank/case.json

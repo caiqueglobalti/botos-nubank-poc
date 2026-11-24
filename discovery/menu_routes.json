@@ -1,0 +1,550 @@
+{
+  "observedAt": "2026-11-02",
+  "source": "https://nubank.com.br/home",
+  "viewport": {
+    "width": 1842,
+    "height": 900
+  },
+  "routes": [
+    {
+      "group": "Para você",
+      "family": "Nubank",
+      "label": "Conheça Nubank",
+      "href": "/nu",
+      "target": "self",
+      "slug": "menu_pv_nu",
+      "expected": "https://nubank.com.br/nu"
+    },
+    {
+      "group": "Para você",
+      "family": "Nubank",
+      "label": "Conta do Nubank",
+      "href": "/nu/conta",
+      "target": "self",
+      "slug": "menu_para_voce_conta",
+      "expected": "https://nubank.com.br/nu/conta"
+    },
+    {
+      "group": "Para você",
+      "family": "Nubank",
+      "label": "Cartão do Nubank",
+      "href": "/nu/cartao",
+      "target": "self",
+      "slug": "menu_pv_nu_cartao",
+      "expected": "https://nubank.com.br/nu/cartao"
+    },
+    {
+      "group": "Para você",
+      "family": "Nubank",
+      "label": "Empréstimos",
+      "href": "/nu/emprestimos",
+      "target": "self",
+      "slug": "menu_pv_nu_emprestimos",
+      "expected": "https://nubank.com.br/nu/emprestimos"
+    },
+    {
+      "group": "Para você",
+      "family": "Nubank",
+      "label": "Caixinhas",
+      "href": "/nu/caixinhas",
+      "target": "self",
+      "slug": "menu_pv_nu_caixinhas",
+      "expected": "https://nubank.com.br/nu/caixinhas"
+    },
+    {
+      "group": "Para você",
+      "family": "Nubank",
+      "label": "Investimentos",
+      "href": "/nu/investimentos",
+      "target": "self",
+      "slug": "menu_pv_nu_investimentos",
+      "expected": "https://nubank.com.br/nu/investimentos"
+    },
+    {
+      "group": "Para você",
+      "family": "Nubank",
+      "label": "Seguros",
+      "href": "/nu/seguros",
+      "target": "self",
+      "slug": "menu_pv_nu_seguros",
+      "expected": "https://nubank.com.br/nu/seguros"
+    },
+    {
+      "group": "Para você",
+      "family": "Nubank",
+      "label": "Conta para menores",
+      "href": "/nu/conta/para-menor-de-18-anos",
+      "target": "self",
+      "slug": "menu_pv_nu_conta_para_menor_de_18_anos",
+      "expected": "https://nubank.com.br/nu/conta-menores"
+    },
+    {
+      "group": "Para você",
+      "family": "Nubank",
+      "label": "NuCel",
+      "href": "/nu/nucel",
+      "target": "self",
+      "slug": "menu_pv_nu_nucel",
+      "expected": "https://nubank.com.br/nu/nucel"
+    },
+    {
+      "group": "Para você",
+      "family": "Nubank",
+      "label": "NuPay",
+      "href": "/nu/nupay",
+      "target": "self",
+      "slug": "menu_pv_nu_nupay",
+      "expected": "https://nubank.com.br/nu/nupay"
+    },
+    {
+      "group": "Para você",
+      "family": "Nubank",
+      "label": "NuCoin",
+      "href": "/nu/nucoin",
+      "target": "self",
+      "slug": "menu_pv_nu_nucoin",
+      "expected": "https://nubank.com.br/nu/nucoin"
+    },
+    {
+      "group": "Para você",
+      "family": "Nubank",
+      "label": "Nubank Cripto",
+      "href": "/nu/nubank-criptomoeda",
+      "target": "self",
+      "slug": "menu_pv_nu_nubank_criptomoeda",
+      "expected": "https://nubank.com.br/nu/nubank-criptomoeda"
+    },
+    {
+      "group": "Para você",
+      "family": "Croma",
+      "label": "Conheça Nubank Croma",
+      "href": "/croma",
+      "target": "self",
+      "slug": "menu_pv_croma",
+      "expected": "https://nubank.com.br/croma"
+    },
+    {
+      "group": "Para você",
+      "family": "Croma",
+      "label": "Cartão Platinum Croma",
+      "href": "/croma/cartao-platinum",
+      "target": "self",
+      "slug": "menu_pv_croma_cartao_platinum",
+      "expected": "https://nubank.com.br/croma/cartao-platinum"
+    },
+    {
+      "group": "Para você",
+      "family": "Croma",
+      "label": "Conta Nubank Croma",
+      "href": "/croma/conta",
+      "target": "self",
+      "slug": "menu_pv_croma_conta",
+      "expected": "https://nubank.com.br/croma/conta"
+    },
+    {
+      "group": "Para você",
+      "family": "Croma",
+      "label": "Seguros",
+      "href": "/croma/seguros",
+      "target": "self",
+      "slug": "menu_pv_croma_seguros",
+      "expected": "https://nubank.com.br/croma/seguros"
+    },
+    {
+      "group": "Para você",
+      "family": "Croma",
+      "label": "Investimentos",
+      "href": "/croma/investimentos",
+      "target": "self",
+      "slug": "menu_pv_croma_investimentos",
+      "expected": "https://nubank.com.br/croma/investimentos"
+    },
+    {
+      "group": "Para você",
+      "family": "Croma",
+      "label": "Empréstimos",
+      "href": "/croma/emprestimos",
+      "target": "self",
+      "slug": "menu_pv_croma_emprestimos",
+      "expected": "https://nubank.com.br/croma/emprestimos"
+    },
+    {
+      "group": "Para você",
+      "family": "Croma",
+      "label": "NuCel",
+      "href": "/croma/nucel-plano-celular",
+      "target": "self",
+      "slug": "menu_pv_croma_nucel_plano_celular",
+      "expected": "https://nubank.com.br/croma/nucel-plano-celular"
+    },
+    {
+      "group": "Para você",
+      "family": "Croma",
+      "label": "Vantagens Nubank Croma",
+      "href": "/croma/vantagens",
+      "target": "self",
+      "slug": "menu_pv_croma_vantagens",
+      "expected": "https://nubank.com.br/croma/vantagens"
+    },
+    {
+      "group": "Para você",
+      "family": "Croma",
+      "label": "Atendimento Nubank Croma",
+      "href": "/croma/atendimento",
+      "target": "self",
+      "slug": "menu_pv_croma_atendimento",
+      "expected": "https://nubank.com.br/croma/atendimento"
+    },
+    {
+      "group": "Para você",
+      "family": "Croma",
+      "label": "Perguntas Frequentes",
+      "href": "/croma/perguntas",
+      "target": "self",
+      "slug": "menu_pv_croma_perguntas",
+      "expected": "https://nubank.com.br/croma/perguntas"
+    },
+    {
+      "group": "Para você",
+      "family": "Ultravioleta",
+      "label": "Conheça Nubank Ultravioleta",
+      "href": "/ultravioleta",
+      "target": "self",
+      "slug": "menu_pv_ultravioleta",
+      "expected": "https://nubank.com.br/ultravioleta"
+    },
+    {
+      "group": "Para você",
+      "family": "Ultravioleta",
+      "label": "Conta Nubank Ultravioleta",
+      "href": "/ultravioleta/conta",
+      "target": "self",
+      "slug": "menu_pv_ultravioleta_conta",
+      "expected": "https://nubank.com.br/ultravioleta/conta"
+    },
+    {
+      "group": "Para você",
+      "family": "Ultravioleta",
+      "label": "Cartão Black Ultravioleta",
+      "href": "/ultravioleta/cartao-black",
+      "target": "self",
+      "slug": "menu_pv_ultravioleta_cartao_black",
+      "expected": "https://nubank.com.br/ultravioleta/cartao-black"
+    },
+    {
+      "group": "Para você",
+      "family": "Ultravioleta",
+      "label": "Investimentos",
+      "href": "/ultravioleta/investimentos",
+      "target": "self",
+      "slug": "menu_pv_ultravioleta_investimentos",
+      "expected": "https://nubank.com.br/ultravioleta/investimentos"
+    },
+    {
+      "group": "Para você",
+      "family": "Ultravioleta",
+      "label": "Seguros",
+      "href": "/ultravioleta/seguros",
+      "target": "self",
+      "slug": "menu_pv_ultravioleta_seguros",
+      "expected": "https://nubank.com.br/ultravioleta/seguros"
+    },
+    {
+      "group": "Para você",
+      "family": "Ultravioleta",
+      "label": "Empréstimos",
+      "href": "/ultravioleta/emprestimos",
+      "target": "self",
+      "slug": "menu_pv_ultravioleta_emprestimos",
+      "expected": "https://nubank.com.br/ultravioleta/emprestimos"
+    },
+    {
+      "group": "Para você",
+      "family": "Ultravioleta",
+      "label": "Central de Proteção Ultravioleta",
+      "href": "/ultravioleta/central-de-protecao",
+      "target": "self",
+      "slug": "menu_pv_ultravioleta_central_de_protecao",
+      "expected": "https://nubank.com.br/ultravioleta/central-de-protecao"
+    },
+    {
+      "group": "Para você",
+      "family": "Ultravioleta",
+      "label": "Nu Viagens",
+      "href": "/ultravioleta/nu-viagens",
+      "target": "self",
+      "slug": "menu_pv_ultravioleta_nu_viagens",
+      "expected": "https://nubank.com.br/ultravioleta/nu-viagens"
+    },
+    {
+      "group": "Para você",
+      "family": "Ultravioleta",
+      "label": "Conta Global",
+      "href": "/ultravioleta/nu-viagens/conta-global",
+      "target": "self",
+      "slug": "menu_pv_ultravioleta_nu_viagens_conta_global",
+      "expected": "https://nubank.com.br/ultravioleta/nu-viagens/conta-global"
+    },
+    {
+      "group": "Para você",
+      "family": "Ultravioleta",
+      "label": "Salas VIP",
+      "href": "/ultravioleta/cartao-black/salas-vip",
+      "target": "self",
+      "slug": "menu_pv_ultravioleta_cartao_black_salas_vip",
+      "expected": "https://nubank.com.br/ultravioleta/cartao-black/salas-vip"
+    },
+    {
+      "group": "Para você",
+      "family": "Ultravioleta",
+      "label": "Ultravioleta Lounge",
+      "href": "/ultravioleta/cartao-black/ultravioleta-lounge",
+      "target": "self",
+      "slug": "menu_pv_ultravioleta_cartao_black_ultravioleta_lounge",
+      "expected": "https://nubank.com.br/ultravioleta/cartao-black/ultravioleta-lounge"
+    },
+    {
+      "group": "Para você",
+      "family": "Ultravioleta",
+      "label": "Benefícios Ultravioleta",
+      "href": "/ultravioleta/beneficios",
+      "target": "self",
+      "slug": "menu_pv_ultravioleta_beneficios",
+      "expected": "https://nubank.com.br/ultravioleta/beneficios"
+    },
+    {
+      "group": "Para você",
+      "family": "Ultravioleta",
+      "label": "Atendimento Ultravioleta",
+      "href": "/ultravioleta/atendimento",
+      "target": "self",
+      "slug": "menu_pv_ultravioleta_atendimento",
+      "expected": "https://nubank.com.br/ultravioleta/atendimento"
+    },
+    {
+      "group": "Para seu negócio",
+      "family": "Nu Empresas",
+      "label": "Conheça o Nu Empresas",
+      "href": "/empresas",
+      "target": "self",
+      "slug": "menu_emp_empresas",
+      "expected": "https://nubank.com.br/empresas"
+    },
+    {
+      "group": "Para seu negócio",
+      "family": "Nu Empresas",
+      "label": "Conta Nu Empresas",
+      "href": "/empresas/conta",
+      "target": "self",
+      "slug": "menu_emp_empresas_conta",
+      "expected": "https://nubank.com.br/empresas/conta"
+    },
+    {
+      "group": "Para seu negócio",
+      "family": "Nu Empresas",
+      "label": "Cartão Nu Empresas",
+      "href": "/empresas/cartao",
+      "target": "self",
+      "slug": "menu_emp_empresas_cartao",
+      "expected": "https://nubank.com.br/empresas/cartao"
+    },
+    {
+      "group": "Para seu negócio",
+      "family": "Nu Empresas",
+      "label": "Investimentos",
+      "href": "/empresas/investimentos",
+      "target": "self",
+      "slug": "menu_emp_empresas_investimentos",
+      "expected": "https://nubank.com.br/empresas/investimentos"
+    },
+    {
+      "group": "Para seu negócio",
+      "family": "Nu Empresas",
+      "label": "Soluções para cobrança",
+      "href": "/empresas/solucoes-para-cobranca",
+      "target": "self",
+      "slug": "menu_emp_empresas_solucoes_para_cobranca",
+      "expected": "https://nubank.com.br/empresas/solucoes-para-cobranca"
+    },
+    {
+      "group": "Para seu negócio",
+      "family": "Nu Empresas",
+      "label": "Empréstimos",
+      "href": "/empresas/emprestimos",
+      "target": "self",
+      "slug": "menu_emp_empresas_emprestimos",
+      "expected": "https://nubank.com.br/empresas/emprestimos"
+    },
+    {
+      "group": "Para seu negócio",
+      "family": "Nu Empresas",
+      "label": "Meus Impostos MEI",
+      "href": "/empresas/gestao-de-impostos",
+      "target": "self",
+      "slug": "menu_emp_empresas_gestao_de_impostos",
+      "expected": "https://nubank.com.br/empresas/gestao-de-impostos"
+    },
+    {
+      "group": "Para seu negócio",
+      "family": "Nu Empresas",
+      "label": "Open Finance",
+      "href": "/empresas/open-finance",
+      "target": "self",
+      "slug": "menu_emp_empresas_open_finance",
+      "expected": "https://nubank.com.br/empresas/open-finance"
+    },
+    {
+      "group": "Para seu negócio",
+      "family": "Nu Empresas",
+      "label": "Imposto de Renda",
+      "href": "/empresas/imposto-de-renda",
+      "target": "self",
+      "slug": "menu_emp_empresas_imposto_de_renda",
+      "expected": "https://nubank.com.br/empresas/imposto-de-renda"
+    },
+    {
+      "group": "Segurança",
+      "family": "Ajuda e Segurança",
+      "label": "Conheça as soluções de segurança",
+      "href": "/ajuda-e-seguranca",
+      "target": "self",
+      "slug": "menu_seg_ajuda_e_seguranca",
+      "expected": "https://nubank.com.br/ajuda-e-seguranca"
+    },
+    {
+      "group": "Segurança",
+      "family": "Ajuda e Segurança",
+      "label": "Central de Proteção",
+      "href": "/ajuda-e-seguranca/central-de-protecao",
+      "target": "self",
+      "slug": "menu_seg_ajuda_e_seguranca_central_de_protecao",
+      "expected": "https://nubank.com.br/ajuda-e-seguranca/central-de-protecao"
+    },
+    {
+      "group": "Segurança",
+      "family": "Ajuda e Segurança",
+      "label": "Canal de Denúncias",
+      "href": "https://denunciargolpes.nubank.com.br/pt/nubankdenuncias",
+      "target": "new",
+      "slug": "menu_seg_canal_de_denuncias",
+      "expected": "https://denunciargolpes.nubank.com.br/pt/nubankdenuncias"
+    },
+    {
+      "group": "Segurança",
+      "family": "Ajuda e Segurança",
+      "label": "Me Roubaram",
+      "href": "https://app.nubank.com.br/roubo",
+      "target": "new",
+      "slug": "menu_seg_me_roubaram",
+      "expected": "https://app.nubank.com.br/roubo"
+    },
+    {
+      "group": "Segurança",
+      "family": "Ajuda e Segurança",
+      "label": "Prevenção a Fraude",
+      "href": "/ajuda-e-seguranca/selo-de-prevencao-a-fraude",
+      "target": "self",
+      "slug": "menu_seg_ajuda_e_seguranca_selo_de_prevencao_a_fraude",
+      "expected": "https://nubank.com.br/ajuda-e-seguranca/selo-de-prevencao-a-fraude"
+    },
+    {
+      "group": "Saiba Mais",
+      "family": "Sobre o Nu",
+      "label": "Saiba mais sobre o Nubank",
+      "href": "/sobre-o-nu",
+      "target": "self",
+      "slug": "menu_mais_sobre_o_nu",
+      "expected": "https://nubank.com.br/sobre-o-nu"
+    },
+    {
+      "group": "Saiba Mais",
+      "family": "Sobre o Nu",
+      "label": "Ética, Compliance e Impacto",
+      "href": "/etica-compliance-e-impacto",
+      "target": "self",
+      "slug": "menu_mais_etica_compliance_e_impacto",
+      "expected": "https://nubank.com.br/etica-compliance-e-impacto"
+    },
+    {
+      "group": "Saiba Mais",
+      "family": "Sobre o Nu",
+      "label": "Trabalhe com a gente",
+      "href": "https://international.nubank.com.br/pt-br/carreiras",
+      "target": "new",
+      "slug": "menu_mais_trabalhe_com_a_gente",
+      "expected": "https://nu.com/pt/carreiras"
+    },
+    {
+      "group": "Saiba Mais",
+      "family": "Sobre o Nu",
+      "label": "Sala de Imprensa",
+      "href": "https://nu.com/pt/sala-de-imprensa",
+      "target": "new",
+      "slug": "menu_mais_sala_de_imprensa",
+      "expected": "https://nu.com/pt/sala-de-imprensa"
+    },
+    {
+      "group": "Saiba Mais",
+      "family": "Sobre o Nu",
+      "label": "Canais de Atendimento",
+      "href": "/contatos",
+      "target": "self",
+      "slug": "menu_mais_contatos",
+      "expected": "https://nubank.com.br/contatos"
+    },
+    {
+      "group": "Saiba Mais",
+      "family": "Informe-se",
+      "label": "Perguntas Frequentes",
+      "href": "/perguntas",
+      "target": "self",
+      "slug": "menu_mais_perguntas",
+      "expected": "https://nubank.com.br/perguntas"
+    },
+    {
+      "group": "Saiba Mais",
+      "family": "Informe-se",
+      "label": "Nubank falindo? Não!",
+      "href": "/o-nubank-vai-fechar-noticia-falsa",
+      "target": "self",
+      "slug": "menu_mais_o_nubank_vai_fechar_noticia_falsa",
+      "expected": "https://nubank.com.br/o-nubank-vai-fechar-noticia-falsa"
+    },
+    {
+      "group": "Saiba Mais",
+      "family": "Informe-se",
+      "label": "Nubank cancelando contas?",
+      "href": "/nubank-cancelando-contas-entenda-quando-acontece",
+      "target": "self",
+      "slug": "menu_mais_nubank_cancelando_contas_entenda_quando_acontece",
+      "expected": "https://nubank.com.br/nubank-cancelando-contas-entenda-quando-acontece"
+    },
+    {
+      "group": "Saiba Mais",
+      "family": "Informe-se",
+      "label": "Novo Desenrola Brasil 2026",
+      "href": "/novo-desenrola-brasil-2026",
+      "target": "self",
+      "slug": "menu_mais_novo_desenrola_brasil_2026",
+      "expected": "https://nubank.com.br/novo-desenrola-brasil-2026"
+    },
+    {
+      "group": "Saiba Mais",
+      "family": "Mais",
+      "label": "Nu Enterprises",
+      "href": "/nu-enterprises",
+      "target": "self",
+      "slug": "menu_mais_nu_enterprises",
+      "expected": "https://nubank.com.br/nu-enterprises"
+    },
+    {
+      "group": "Saiba Mais",
+      "family": "Mais",
+      "label": "Outros links e canais",
+      "href": "#footer-theme-holder",
+      "target": "anchor",
+      "slug": "menu_mais_footer_theme_holder",
+      "expected": "#footer-theme-holder"
+    }
+  ]
+}

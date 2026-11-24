@@ -1,0 +1,6 @@
+{
+  "schemaVersion": 1,
+  "automationsDir": "automations",
+  "smokeTest": "automations/abrir_botos.robot",
+  "panelPort": 60943
+}

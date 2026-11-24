@@ -1,0 +1,55 @@
+{
+  "observedAt": "2026-11-02",
+  "source": "https://nubank.com.br/home",
+  "cases": [
+    {
+      "slug": "menu_cabecalho_logo",
+      "label": "Logo Nubank",
+      "observedOutcome": "Navega para https://nubank.com.br/",
+      "domains": [
+        "nubank.com.br"
+      ]
+    },
+    {
+      "slug": "menu_cabecalho_empresas",
+      "label": "Para seu negócio",
+      "observedOutcome": "Navega para /empresas",
+      "domains": [
+        "nubank.com.br"
+      ]
+    },
+    {
+      "slug": "menu_cabecalho_seguranca",
+      "label": "Segurança",
+      "observedOutcome": "Navega para /ajuda-e-seguranca",
+      "domains": [
+        "nubank.com.br"
+      ]
+    },
+    {
+      "slug": "menu_cabecalho_login_empresas",
+      "label": "Login Empresas",
+      "observedOutcome": "Abre app.nubank.com.br em nova aba",
+      "domains": [
+        "nubank.com.br",
+        "app.nubank.com.br"
+      ]
+    },
+    {
+      "slug": "menu_cabecalho_busca",
+      "label": "Busca",
+      "observedOutcome": "Abre e fecha o campo Busca",
+      "domains": [
+        "nubank.com.br"
+      ]
+    },
+    {
+      "slug": "menu_cabecalho_quero_ser_nubank",
+      "label": "Quero ser Nubank",
+      "observedOutcome": "Abre diálogo que orienta preenchimento de CPF; não envia dados",
+      "domains": [
+        "nubank.com.br"
+      ]
+    }
+  ]
+}
