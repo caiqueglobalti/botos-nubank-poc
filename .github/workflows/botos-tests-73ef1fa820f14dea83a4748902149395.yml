@@ -1,0 +1,153 @@
+name: BotOS · Testes
+'on':
+  push:
+    branches:
+    - botos/testes/73ef1fa820f14dea83a4748902149395
+    paths:
+    - .github/workflows/botos-tests-73ef1fa820f14dea83a4748902149395.yml
+permissions:
+  contents: read
+jobs:
+  test-1:
+    name: Robot Framework · .
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: .
+    steps:
+    - id: checkout
+      uses: actions/checkout@v4
+      with:
+        ref: 2e56bbefdf98e004cc91e949b27898f206118e19
+        persist-credentials: false
+    - id: runtime
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    - id: install
+      name: Instalar dependências
+      shell: bash
+      run: "set +e\n(\n    set -e\n    python -m pip install robotframework -r requirements.txt\n\
+        \    if command -v rfbrowser >/dev/null; then echo \"browser=true\" >> \"\
+        $GITHUB_OUTPUT\"; fi\n) 2>&1 | tee \"$RUNNER_TEMP/botos-install.log\"\nstatus=${PIPESTATUS[0]}\n\
+        printf 'exit_code=%s\\n' \"$status\" >> \"$GITHUB_OUTPUT\"\nexit \"$status\"\
+        \n"
+    - id: robot_node
+      if: ${{ steps.install.outputs.browser == 'true' }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+    - id: browser
+      name: Preparar navegadores
+      shell: bash
+      run: "set +e\n(\n    set -e\n    if python -c 'from importlib.util import find_spec;\
+        \ raise SystemExit(find_spec(\"BrowserBatteries\") is None)'; then\n     \
+        \   rfbrowser install --with-deps\n    else\n        rfbrowser init --with-deps\n\
+        \    fi\n) 2>&1 | tee \"$RUNNER_TEMP/botos-browser.log\"\nstatus=${PIPESTATUS[0]}\n\
+        printf 'exit_code=%s\\n' \"$status\" >> \"$GITHUB_OUTPUT\"\nexit \"$status\"\
+        \n"
+      if: ${{ steps.install.outputs.browser == 'true' }}
+    - id: test
+      name: Executar suíte
+      shell: bash
+      run: "set +e\n(\n    set -e\n    runner=()\n    if command -v xvfb-run >/dev/null;\
+        \ then runner=(xvfb-run -a); fi\n    \"${runner[@]}\" python -m robot --norpa\
+        \ --outputdir \"$RUNNER_TEMP\" --output NONE --xunit botos-test-results.xml\
+        \ --log NONE --report NONE ./automations/abrir_botos.robot ./automations/menu_cabecalho_busca.robot\
+        \ ./automations/menu_cabecalho_empresas.robot ./automations/menu_cabecalho_login_empresas.robot\
+        \ ./automations/menu_cabecalho_logo.robot ./automations/menu_cabecalho_quero_ser_nubank.robot\
+        \ ./automations/menu_cabecalho_seguranca.robot ./automations/menu_emp_empresas.robot\
+        \ ./automations/menu_emp_empresas_cartao.robot ./automations/menu_emp_empresas_conta.robot\
+        \ ./automations/menu_emp_empresas_emprestimos.robot ./automations/menu_emp_empresas_gestao_de_impostos.robot\
+        \ ./automations/menu_emp_empresas_imposto_de_renda.robot ./automations/menu_emp_empresas_investimentos.robot\
+        \ ./automations/menu_emp_empresas_open_finance.robot ./automations/menu_emp_empresas_solucoes_para_cobranca.robot\
+        \ ./automations/menu_mais_contatos.robot ./automations/menu_mais_etica_compliance_e_impacto.robot\
+        \ ./automations/menu_mais_footer_theme_holder.robot ./automations/menu_mais_novo_desenrola_brasil_2026.robot\
+        \ ./automations/menu_mais_nu_enterprises.robot ./automations/menu_mais_nubank_cancelando_contas_entenda_quando_acontece.robot\
+        \ ./automations/menu_mais_o_nubank_vai_fechar_noticia_falsa.robot ./automations/menu_mais_perguntas.robot\
+        \ ./automations/menu_mais_sala_de_imprensa.robot ./automations/menu_mais_sobre_o_nu.robot\
+        \ ./automations/menu_mais_trabalhe_com_a_gente.robot ./automations/menu_para_voce_conta.robot\
+        \ ./automations/menu_pv_croma.robot ./automations/menu_pv_croma_atendimento.robot\
+        \ ./automations/menu_pv_croma_cartao_platinum.robot ./automations/menu_pv_croma_conta.robot\
+        \ ./automations/menu_pv_croma_emprestimos.robot ./automations/menu_pv_croma_investimentos.robot\
+        \ ./automations/menu_pv_croma_nucel_plano_celular.robot ./automations/menu_pv_croma_perguntas.robot\
+        \ ./automations/menu_pv_croma_seguros.robot ./automations/menu_pv_croma_vantagens.robot\
+        \ ./automations/menu_pv_nu.robot ./automations/menu_pv_nu_caixinhas.robot\
+        \ ./automations/menu_pv_nu_cartao.robot ./automations/menu_pv_nu_conta_para_menor_de_18_anos.robot\
+        \ ./automations/menu_pv_nu_emprestimos.robot ./automations/menu_pv_nu_investimentos.robot\
+        \ ./automations/menu_pv_nu_nubank_criptomoeda.robot ./automations/menu_pv_nu_nucel.robot\
+        \ ./automations/menu_pv_nu_nucoin.robot ./automations/menu_pv_nu_nupay.robot\
+        \ ./automations/menu_pv_nu_seguros.robot ./automations/menu_pv_ultravioleta.robot\
+        \ ./automations/menu_pv_ultravioleta_atendimento.robot ./automations/menu_pv_ultravioleta_beneficios.robot\
+        \ ./automations/menu_pv_ultravioleta_cartao_black.robot ./automations/menu_pv_ultravioleta_cartao_black_salas_vip.robot\
+        \ ./automations/menu_pv_ultravioleta_cartao_black_ultravioleta_lounge.robot\
+        \ ./automations/menu_pv_ultravioleta_central_de_protecao.robot ./automations/menu_pv_ultravioleta_conta.robot\
+        \ ./automations/menu_pv_ultravioleta_emprestimos.robot ./automations/menu_pv_ultravioleta_investimentos.robot\
+        \ ./automations/menu_pv_ultravioleta_nu_viagens.robot ./automations/menu_pv_ultravioleta_nu_viagens_conta_global.robot\
+        \ ./automations/menu_pv_ultravioleta_seguros.robot ./automations/menu_seg_ajuda_e_seguranca.robot\
+        \ ./automations/menu_seg_ajuda_e_seguranca_central_de_protecao.robot ./automations/menu_seg_ajuda_e_seguranca_selo_de_prevencao_a_fraude.robot\
+        \ ./automations/menu_seg_canal_de_denuncias.robot ./automations/menu_seg_me_roubaram.robot\
+        \ ./automations/preencher_cpf_nubank.robot\n) 2>&1 | tee \"$RUNNER_TEMP/botos-test.log\"\
+        \nstatus=${PIPESTATUS[0]}\nprintf 'exit_code=%s\\n' \"$status\" >> \"$GITHUB_OUTPUT\"\
+        \nexit \"$status\"\n"
+    - id: diagnostic
+      name: Registrar diagnóstico
+      if: always()
+      shell: bash
+      working-directory: .
+      env:
+        BOTOS_COMPONENT: .
+        BOTOS_FRAMEWORK: Robot Framework
+        BOTOS_CHECKOUT_OUTCOME: ${{ steps.checkout.outcome }}
+        BOTOS_CHECKOUT_EXIT_CODE: ${{ steps.checkout.outputs.exit_code }}
+        BOTOS_RUNTIME_OUTCOME: ${{ steps.runtime.outcome }}
+        BOTOS_RUNTIME_EXIT_CODE: ${{ steps.runtime.outputs.exit_code }}
+        BOTOS_INSTALL_OUTCOME: ${{ steps.install.outcome }}
+        BOTOS_INSTALL_EXIT_CODE: ${{ steps.install.outputs.exit_code }}
+        BOTOS_BROWSER_OUTCOME: ${{ steps.browser.outcome }}
+        BOTOS_BROWSER_EXIT_CODE: ${{ steps.browser.outputs.exit_code }}
+        BOTOS_TEST_OUTCOME: ${{ steps.test.outcome }}
+        BOTOS_TEST_EXIT_CODE: ${{ steps.test.outputs.exit_code }}
+        BOTOS_ROBOT_NODE_OUTCOME: ${{ steps.robot_node.outcome }}
+      run: "python3 - <<'PY'\nimport json\nimport os\nimport re\nfrom pathlib import\
+        \ Path\n\ntemp = Path(os.environ[\"RUNNER_TEMP\"])\ndata = {\"component\"\
+        : os.environ[\"BOTOS_COMPONENT\"], \"framework\": os.environ[\"BOTOS_FRAMEWORK\"\
+        ]}\nfor stage in ('checkout', 'runtime', 'install', 'browser', 'test'):\n\
+        \    prefix = f\"BOTOS_{stage.upper()}\"\n    outcome = os.getenv(prefix +\
+        \ \"_OUTCOME\")\n    if stage == \"runtime\" and os.getenv(\"BOTOS_ROBOT_NODE_OUTCOME\"\
+        ) == \"failure\":\n        outcome = \"failure\"\n    if outcome != \"failure\"\
+        :\n        continue\n    data[\"stage\"] = stage\n    code = os.getenv(prefix\
+        \ + \"_EXIT_CODE\", \"\")\n    if code.isdecimal():\n        data[\"exit_code\"\
+        ] = int(code)\n    output = temp / f\"botos-{stage}.log\"\n    if output.is_file():\n\
+        \        with output.open(\"rb\") as stream:\n            head = stream.read(256_000)\n\
+        \            stream.seek(max(0, output.stat().st_size - 256_000))\n      \
+        \      logs = (head + b\"\\n\" + stream.read(256_000)).decode(\"utf-8\", errors=\"\
+        replace\")\n        for reason, pattern in {'robot_mode': 'conflicting execution\
+        \ modes', 'lockfile': 'npm ci.*(?:in sync|existing package-lock)|lock file.*(?:out\
+        \ of date|out of sync)', 'resolution': 'ResolutionImpossible|no matching distribution\
+        \ found|could not find a version that satisfies|\\\\bERESOLVE\\\\b', 'runtime_version':\
+        \ '\\\\bEBADENGINE\\\\b|requires a different Python|unsupported engine', 'browser_missing':\
+        \ \"executable doesn't exist|browser executable.*not found|please run .*playwright\
+        \ install|rfbrowser init.*(?:first|required)|missing.*dependencies to run\
+        \ browsers\", 'automation_input': 'informe\\\\s+automationInput\\\\.([a-zA-Z_][a-zA-Z0-9_]{0,63})\\\
+        \\b', 'service_unavailable': '\\\\b(?:ECONNREFUSED|ERR_NAME_NOT_RESOLVED|ERR_CONNECTION_REFUSED|ConnectionRefusedError)\\\
+        \\b', 'locator_timeout': 'locator\\\\.[\\\\w.]+:.*\\\\btimeout\\\\b|timeout.*waiting\
+        \ for locator', 'url_mismatch': '\\\\bURL deve conter\\\\b.*\\\\bfailed\\\\\
+        b|\\\\bURL\\\\b.*\\\\bdoes not (?:contain|match)\\\\b', 'missing_dependency':\
+        \ 'ModuleNotFoundError|cannot find (?:module|package)|Importing library .*\
+        \ failed', 'no_tests': 'collected 0 items|no test files found|contains no\
+        \ tests or tasks|no tests ran', 'collection': 'error collecting|errors? during\
+        \ collection|failed to load config|parsing .*failed', 'assertion': '\\\\bAssertionError\\\
+        \\b'}.items():\n            if re.search(pattern, logs, re.IGNORECASE):\n\
+        \                data[\"reason\"] = reason\n                break\n    break\n\
+        (temp / 'botos-test-diagnostic.json').write_text(json.dumps(data), encoding=\"\
+        utf-8\")\nPY\n"
+    - uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: stackos-tests-robot-1
+        path: '${{ runner.temp }}/botos-test-results.xml
+
+          ${{ runner.temp }}/botos-test-diagnostic.json'
+        if-no-files-found: error
